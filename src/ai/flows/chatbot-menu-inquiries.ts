@@ -55,7 +55,6 @@ const prompt = ai.definePrompt({
   - Cornbread: Sweet and moist cornbread. ($2.99)
   - Sweet Potato Fries: Crispy and seasoned with cinnamon and sugar. ($5.99)
   - Baked Beans: Hearty baked beans with a sweet and smoky flavor. ($3.99)
-  - Grilled Teriyaki Parmesan Corn: Grilled corn on the cob with a teriyaki glaze and parmesan cheese. ($4.99)
   - Great Grannys Green Beans: Classic-style green beans. ($3.99)
   - Fried Okra: Crispy fried okra. ($4.99)
   - Potato Salad: Creamy and tangy potato salad. ($3.99)

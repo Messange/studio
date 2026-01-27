@@ -126,14 +126,6 @@ export const menuItems = [
     imageId: "baked-beans",
   },
   {
-    id: 15,
-    name: "Grilled Teriyaki Parmesan Corn",
-    description: "Grilled corn on the cob with a teriyaki glaze and parmesan cheese.",
-    price: "$4.99",
-    category: "side",
-    imageId: "teriyaki-corn",
-  },
-  {
     id: 16,
     name: "Great Grannys Green Beans",
     description: "Classic green beans just like granny used to make.",

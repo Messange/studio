@@ -61,12 +61,6 @@
       "imageHint": "baked beans"
     },
     {
-      "id": "teriyaki-corn",
-      "description": "Grilled corn with teriyaki sauce.",
-      "imageUrl": "https://images.unsplash.com/photo-1601284704816-2470239aa364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmlsbGVkJTIwY29ybnxlbnwwfHx8fDE3Njk0OTMzMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grilled corn"
-    },
-    {
       "id": "green-beans",
       "description": "A serving of green beans.",
       "imageUrl": "https://images.unsplash.com/photo-1508900173264-bb171fa617e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncmVlbiUyMGJlYW5zfGVufDB8fHx8MTc2OTQ3NDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
