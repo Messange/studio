@@ -35,13 +35,22 @@ const prompt = ai.definePrompt({
 
   Menu:
   - Pulled Pork Sandwich: Slow-smoked pulled pork, served on a toasted bun with your choice of sauce. ($9.99)
-  - BBQ Ribs: Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce. (Half rack: $14.99, Full rack: $24.99)
+  - Pulled Pork Plate: A generous portion of our slow-smoked pulled pork, served with two sides and cornbread. ($15.99)
+  - BBQ Ribs: Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce. Served with two sides and cornbread. (Half rack: $14.99, Full rack: $24.99)
   - Smoked Brisket Platter: Sliced smoked brisket, served with two sides and cornbread. ($16.99)
-  - Fried Chicken: Crispy fried chicken, seasoned with our special blend of spices. (2 pieces: $7.99, 4 pieces: $12.99)
-  - Mac and Cheese: Creamy mac and cheese, made with a blend of cheddar and parmesan cheeses. ($4.99)
-  - Coleslaw: Fresh coleslaw, made with shredded cabbage, carrots, and our tangy coleslaw dressing. ($3.99)
-  - Cornbread: Sweet and moist cornbread, baked fresh daily. ($2.99)
-  - Sweet Potato Fries: Crispy sweet potato fries, seasoned with cinnamon and sugar. ($5.99)
+  - Fried Chicken Platter: Crispy fried chicken, seasoned with our special blend of spices. Served with two sides and cornbread. (2 pieces: $14.99, 4 pieces: $19.99)
+  
+  Sides:
+  - Green Chili Mac and Cheese: Creamy mac and cheese with a kick of green chili. ($5.99)
+  - Coleslaw: Fresh coleslaw with our tangy dressing. ($3.99)
+  - Cornbread: Sweet and moist cornbread. ($2.99)
+  - Sweet Potato Fries: Crispy and seasoned with cinnamon and sugar. ($5.99)
+  - Baked Beans: Hearty baked beans with a sweet and smoky flavor. ($3.99)
+  - Grilled Teriyaki Parmesan Corn: Grilled corn on the cob with a teriyaki glaze and parmesan cheese. ($4.99)
+  - Great Grannys Green Beans: Classic-style green beans. ($3.99)
+  - Fried Okra: Crispy fried okra. ($4.99)
+  - Potato Salad: Creamy and tangy potato salad. ($3.99)
+  - Fries: Classic crispy french fries. ($3.99)
 
   Question: {{{query}}}
 

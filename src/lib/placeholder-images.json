@@ -31,9 +31,9 @@
       "imageHint": "fried chicken"
     },
     {
-      "id": "mac-cheese",
-      "description": "A creamy bowl of baked macaroni and cheese.",
-      "imageUrl": "https://images.unsplash.com/photo-1612293682989-1b47baacd4a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWNhcm9uaSUyMGNoZWVzZXxlbnwwfHx8fDE3Njk0OTE2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "green-chili-mac-cheese",
+      "description": "A creamy bowl of baked macaroni and cheese with green chilis.",
+      "imageUrl": "https://images.unsplash.com/photo-1657047869586-258ee389a00d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWNhcm9uaSUyMGNoZWVzZXxlbnwwfHx8fDE3Njk0OTE2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "macaroni cheese"
     },
     {
@@ -53,6 +53,48 @@
       "description": "A basket of crispy sweet potato fries.",
       "imageUrl": "https://images.unsplash.com/photo-1603481712606-08b5a2789816?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzd2VldCUyMHBvdGF0byUyMGZyaWVzfGVufDB8fHx8MTc2OTQ5MTYzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sweet potato fries"
+    },
+    {
+      "id": "baked-beans",
+      "description": "A bowl of baked beans.",
+      "imageUrl": "https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWtlZCUyMGJlYW5zfGVufDB8fHx8MTc2OTQ5MzMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "baked beans"
+    },
+    {
+      "id": "teriyaki-corn",
+      "description": "Grilled corn with teriyaki sauce.",
+      "imageUrl": "https://images.unsplash.com/photo-1601284704816-2470239aa364?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmlsbGVkJTIwY29ybnxlbnwwfHx8fDE3Njk0OTMzMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grilled corn"
+    },
+    {
+      "id": "green-beans",
+      "description": "A serving of green beans.",
+      "imageUrl": "https://images.unsplash.com/photo-1508900173264-bb171fa617e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncmVlbiUyMGJlYW5zfGVufDB8fHx8MTc2OTQ3NDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green beans"
+    },
+    {
+      "id": "fried-okra",
+      "description": "A basket of fried okra.",
+      "imageUrl": "https://images.unsplash.com/photo-1614778168922-ab1cdf04800e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnJpZWQlMjBva3JhfGVufDB8fHx8MTc2OTQyNTUyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fried okra"
+    },
+    {
+      "id": "potato-salad",
+      "description": "A bowl of potato salad.",
+      "imageUrl": "https://images.unsplash.com/photo-1680249816404-29fedb436294?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3RhdG8lMjBzYWxhZHxlbnwwfHx8fDE3Njk0OTMzMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "potato salad"
+    },
+    {
+      "id": "fries",
+      "description": "A basket of french fries.",
+      "imageUrl": "https://images.unsplash.com/photo-1606755456206-b25206cde27e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmVuY2glMjBmcmllc3xlbnwwfHx8fDE3Njk0NzE2NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "french fries"
+    },
+    {
+      "id": "pulled-pork-plate",
+      "description": "A plate of pulled pork with sides.",
+      "imageUrl": "https://images.unsplash.com/photo-1739193670501-335f43a83229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3JrJTIwcGxhdGV8ZW58MHx8fHwxNzY5NDkzMzMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pork plate"
     }
   ]
 }

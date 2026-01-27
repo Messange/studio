@@ -31,7 +31,7 @@ export default function LocationSection() {
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center p-4">
               <p className="text-center text-muted-foreground">
-                Google Maps could not be loaded. Please ensure the API key is configured correctly.
+                Google Maps could not be loaded. Coming Soon!
               </p>
             </div>
           )}
@@ -41,29 +41,26 @@ export default function LocationSection() {
             <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-semibold text-lg">Address</h3>
-              <p className="text-muted-foreground">123 BBQ Lane, Austin, TX 78701</p>
+              <p className="text-muted-foreground">2100 South University Boulevard, Denver, CO, USA</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Clock className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-semibold text-lg">Hours</h3>
-              <p className="text-muted-foreground">Mon - Sun: 11:00 AM - 9:00 PM</p>
+              <p className="text-muted-foreground">Mon - Sun: 11:00 AM - 10:00 PM</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-semibold text-lg">Phone</h3>
-              <p className="text-muted-foreground">(512) 555-1234</p>
+              <p className="text-muted-foreground">(720)484-6035</p>
             </div>
           </div>
            <div className="flex items-start gap-4">
             <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-            <div>
-              <h3 className="font-semibold text-lg">Email</h3>
-              <p className="text-muted-foreground">contact@saucysbbq.com</p>
-            </div>
+          
           </div>
         </div>
       </div>

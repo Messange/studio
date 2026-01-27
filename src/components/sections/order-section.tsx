@@ -3,6 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
+import { Trash2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,14 +24,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { menuItems } from "@/lib/data";
-import { useState } from "react";
-import { Trash2 } from "lucide-react";
 
 const orderItemSchema = z.object({
   itemId: z.string().min(1, "Please select an item."),
   quantity: z.coerce.number().min(1, "Quantity must be at least 1."),
+  sides: z.array(z.string()).max(2, "You can select up to 2 sides.").optional(),
 });
 
 const formSchema = z.object({
@@ -42,6 +44,8 @@ type OrderItem = {
   id: number;
 };
 
+const sideItems = menuItems.filter(item => item.category === 'side');
+
 export default function OrderSection() {
   const { toast } = useToast();
   const [orderItems, setOrderItems] = useState<OrderItem[]>([{ id: 1 }]);
@@ -51,7 +55,7 @@ export default function OrderSection() {
     defaultValues: {
       name: "",
       phone: "",
-      items: [{ itemId: "", quantity: 1 }],
+      items: [{ itemId: "", quantity: 1, sides: [] }],
     },
   });
 
@@ -69,7 +73,7 @@ export default function OrderSection() {
     const newId = (orderItems[orderItems.length - 1]?.id || 0) + 1;
     setOrderItems([...orderItems, { id: newId }]);
     const currentItems = form.getValues("items");
-    form.setValue("items", [...currentItems, { itemId: "", quantity: 1 }]);
+    form.setValue("items", [...currentItems, { itemId: "", quantity: 1, sides: [] }]);
   };
 
   const removeItem = (index: number) => {
@@ -123,48 +127,104 @@ export default function OrderSection() {
 
           <div className="space-y-4">
             <h3 className="text-lg font-medium">Your Order</h3>
-            {orderItems.map((orderItem, index) => (
-              <div key={orderItem.id} className="flex items-end gap-4">
-                 <FormField
-                  control={form.control}
-                  name={`items.${index}.itemId`}
-                  render={({ field }) => (
-                    <FormItem className="flex-1">
-                      <FormLabel>Menu Item</FormLabel>
-                       <Select onValueChange={field.onChange} defaultValue={field.value}>
+            {orderItems.map((orderItem, index) => {
+               const selectedItemId = form.watch(`items.${index}.itemId`);
+               const selectedItem = menuItems.find(item => item.id.toString() === selectedItemId);
+              
+              return (
+              <div key={orderItem.id} className="space-y-4 rounded-lg border p-4">
+                 <div className="flex items-end gap-4">
+                  <FormField
+                    control={form.control}
+                    name={`items.${index}.itemId`}
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormLabel>Menu Item</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select a dish" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {menuItems.map(item => (
+                              <SelectItem key={item.id} value={item.id.toString()}>{item.name}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name={`items.${index}.quantity`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Quantity</FormLabel>
                         <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a dish" />
-                          </SelectTrigger>
+                          <Input type="number" min="1" {...field} className="w-24"/>
                         </FormControl>
-                        <SelectContent>
-                          {menuItems.map(item => (
-                            <SelectItem key={item.id} value={item.id.toString()}>{item.name}</SelectItem>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button variant="ghost" size="icon" onClick={() => removeItem(index)} disabled={orderItems.length <= 1} aria-label="Remove item">
+                    <Trash2 className="h-4 w-4 text-destructive" />
+                  </Button>
+                </div>
+
+                {selectedItem?.isPlate && (
+                  <FormField
+                    control={form.control}
+                    name={`items.${index}.sides`}
+                    render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <div>
+                          <FormLabel className="text-base">Side Options</FormLabel>
+                          <FormDescription>
+                            (Optional) Select up to 2 sides for your plate.
+                          </FormDescription>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          {sideItems.map((side) => (
+                              <FormField
+                                key={side.id}
+                                control={form.control}
+                                name={`items.${index}.sides`}
+                                render={({ field: sideField }) => (
+                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                                    <FormControl>
+                                      <Checkbox
+                                        checked={sideField.value?.includes(side.id.toString())}
+                                        onCheckedChange={(checked) => {
+                                          const currentSides = sideField.value || [];
+                                          if (checked) {
+                                            if (currentSides.length < 2) {
+                                              sideField.onChange([...currentSides, side.id.toString()]);
+                                            }
+                                          } else {
+                                            sideField.onChange(currentSides.filter((value) => value !== side.id.toString()));
+                                          }
+                                        }}
+                                        disabled={!sideField.value?.includes(side.id.toString()) && sideField.value?.length >= 2}
+                                      />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">
+                                      {side.name}
+                                    </FormLabel>
+                                  </FormItem>
+                                )}
+                              />
                           ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                 <FormField
-                  control={form.control}
-                  name={`items.${index}.quantity`}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Quantity</FormLabel>
-                      <FormControl>
-                        <Input type="number" min="1" {...field} className="w-24"/>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button variant="ghost" size="icon" onClick={() => removeItem(index)} disabled={orderItems.length <= 1} aria-label="Remove item">
-                  <Trash2 className="h-4 w-4 text-destructive" />
-                </Button>
+                        </div>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
               </div>
-            ))}
+            )})}
           </div>
 
           <div className="flex justify-between items-center">
