@@ -60,7 +60,10 @@ export default function LocationSection() {
           </div>
            <div className="flex items-start gap-4">
             <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-          
+            <div>
+              <h3 className="font-semibold text-lg">Email</h3>
+              <p className="text-muted-foreground">contact@saucys.com</p>
+            </div>
           </div>
         </div>
       </div>

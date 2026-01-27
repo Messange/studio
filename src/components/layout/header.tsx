@@ -8,7 +8,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Logo className="h-8 w-8 text-primary" />
           <span className="text-2xl font-bold font-headline tracking-tight">
-            Saucy's Southern BBQ
+            Saucy's Southern BBQ & Cuisine
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">

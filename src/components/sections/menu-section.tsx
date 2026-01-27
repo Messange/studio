@@ -37,7 +37,6 @@ export default function MenuSection() {
 
       <div>
         <h3 className="text-2xl font-bold font-headline mb-6">Plates</h3>
-        <p className="text-center text-muted-foreground -mt-4 mb-6">Served with your choice of two sides and cornbread. Plate entree options: Wings, Ribs, Hot Links.</p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {menuItems.filter(item => item.category === 'plate').map((item) => {
             const image = getPlaceholderImage(item.imageId);

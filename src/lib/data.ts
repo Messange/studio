@@ -4,7 +4,7 @@ export const menuItems = [
   {
     id: 100,
     name: "One Entree Plate",
-    description: "One of our signature smoked entrees (Wings, Ribs, or Hot Links) piled high, served with your choice of two scratch-made sides and a piece of sweet cornbread.",
+    description: "Your choice of one entree (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
     price: "$17.99",
     category: "plate",
     imageId: "bbq-ribs",
@@ -12,7 +12,7 @@ export const menuItems = [
   {
     id: 101,
     name: "Two Entree Plate",
-    description: "Can't decide? Pick two of your favorite entrees (Wings, Ribs, or Hot Links)! Comes with two of our delicious sides and a piece of sweet cornbread.",
+    description: "Your choice of two entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
     price: "$23.99",
     category: "plate",
     imageId: "wings",
@@ -20,7 +20,7 @@ export const menuItems = [
   {
     id: 102,
     name: "Three Entree Plate",
-    description: "The ultimate pitmaster's feast! Choose any three of our signature entrees (Wings, Ribs, or Hot Links), served with two sides and a piece of sweet cornbread.",
+    description: "Your choice of three entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
     price: "$28.99",
     category: "plate",
     imageId: "hot-links",
