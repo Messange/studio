@@ -1,3 +1,4 @@
+"use client";
 import { Briefcase, MapPin, ShoppingCart, Utensils, Users } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/layout/header';

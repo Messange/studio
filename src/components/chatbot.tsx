@@ -80,19 +80,18 @@ export default function Chatbot() {
 
     startTransition(async () => {
       try {
-        let response;
         const orderIdMatch = inputValue.match(/order\s*#?(\d+)/i);
         
         if (orderIdMatch) {
           const orderId = orderIdMatch[1];
-          response = await checkOrderStatus({ orderId });
+          const response = await checkOrderStatus({ orderId });
           let botText = `Status for order #${orderId}: ${response.status}.`;
           if (response.estimatedDeliveryTime) {
             botText += ` Estimated delivery time: ${response.estimatedDeliveryTime}.`;
           }
           setMessages(prev => [...prev, { id: Date.now() + 1, sender: "bot", text: botText }]);
         } else {
-          response = await chatbotMenuInquiries({ query: inputValue });
+          const response = await chatbotMenuInquiries({ query: inputValue });
           setMessages(prev => [...prev, { id: Date.now() + 1, sender: "bot", text: response.answer }]);
         }
       } catch (error) {

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { APIProvider } from "@vis.gl/react-google-maps";
-import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
+import { ClientProviders } from "./client-providers";
 
 export const metadata: Metadata = {
   title: "Saucy's Southern BBQ & Cuisine",
@@ -21,10 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
-          {children}
-          <Toaster />
-        </APIProvider>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
