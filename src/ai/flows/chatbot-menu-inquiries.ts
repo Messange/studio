@@ -35,13 +35,14 @@ const prompt = ai.definePrompt({
 
   Menu:
   
-  Plates (Served with your choice of two sides and cornbread):
-  - Pulled Pork Plate: A generous portion of our slow-smoked pulled pork. ($15.99)
-  - BBQ Ribs Plate: Tender, slow-smoked BBQ ribs. (Half rack: $14.99, Full rack: $24.99)
-  - Smoked Brisket Plate: Sliced smoked brisket. ($16.99)
-  - Fried Chicken Plate: Crispy fried chicken. (2 pieces: $14.99, 4 pieces: $19.99)
+  Plates (Served with your choice of two sides and cornbread. Entree choices for plates are Wings, Ribs, and Hot Links):
+  - One Entree Plate: Your choice of one entree. ($17.99)
+  - Two Entree Plate: Your choice of two entrees. ($23.99)
+  - Three Entree Plate: Your choice of three entrees. ($28.99)
 
   Entrees (A La Carte):
+  - Wings (6pc): 6 pieces of our famous wings. Flavors: Smoky BBQ, Spicy Buffalo, Garlic Parmesan. ($10.99)
+  - Hot Links: Spicy sausage links, smoked to perfection. ($8.99)
   - Pulled Pork Sandwich: Slow-smoked pulled pork on a toasted bun. ($9.99)
   - Pulled Pork (A La Carte): A half-pound of our slow-smoked pulled pork. ($10.99)
   - BBQ Ribs (A La Carte): Tender, slow-smoked BBQ ribs. (Half rack: $11.99, Full rack: $21.99)

@@ -1,9 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
-import { useState } from "react";
 import { Trash2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -26,12 +25,16 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { menuItems } from "@/lib/data";
+import { menuItems, wingFlavors } from "@/lib/data";
 
 const orderItemSchema = z.object({
   itemId: z.string().min(1, "Please select an item."),
   quantity: z.coerce.number().min(1, "Quantity must be at least 1."),
-  sides: z.array(z.string()).max(2, "You can select up to 2 sides.").optional(),
+  entrees: z.array(z.object({
+    entreeId: z.string().min(1, "Please select an entree."),
+    wingFlavor: z.string().optional(),
+  })).optional(),
+  sides: z.array(z.string()).optional(),
 });
 
 const formSchema = z.object({
@@ -40,23 +43,25 @@ const formSchema = z.object({
   items: z.array(orderItemSchema).min(1, "Please add at least one item to your order."),
 });
 
-type OrderItem = {
-  id: number;
-};
-
 const sideItems = menuItems.filter(item => item.category === 'side');
+const plateEntreeOptions = menuItems.filter(item => [7, 20, 21].includes(item.id));
+const WINGS_ENTREE_ID = "20";
 
 export default function OrderSection() {
   const { toast } = useToast();
-  const [orderItems, setOrderItems] = useState<OrderItem[]>([{ id: 1 }]);
-
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       phone: "",
-      items: [{ itemId: "", quantity: 1, sides: [] }],
+      items: [{ itemId: "", quantity: 1, entrees: [], sides: [] }],
     },
+  });
+
+  const { fields, append, remove } = useFieldArray({
+    control: form.control,
+    name: "items",
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -66,23 +71,16 @@ export default function OrderSection() {
       description: "Thank you! We've received your order and will start preparing it right away.",
     });
     form.reset();
-    setOrderItems([{ id: 1 }]);
   }
   
   const addNewItem = () => {
-    const newId = (orderItems[orderItems.length - 1]?.id || 0) + 1;
-    setOrderItems([...orderItems, { id: newId }]);
-    const currentItems = form.getValues("items");
-    form.setValue("items", [...currentItems, { itemId: "", quantity: 1, sides: [] }]);
+    append({ itemId: "", quantity: 1, entrees: [], sides: [] });
   };
 
   const removeItem = (index: number) => {
-    if (orderItems.length <= 1) return;
-    const newOrderItems = orderItems.filter((_, i) => i !== index);
-    setOrderItems(newOrderItems);
-    const currentItems = form.getValues("items");
-    const newFormItems = currentItems.filter((_, i) => i !== index);
-    form.setValue("items", newFormItems);
+    if (fields.length > 1) {
+      remove(index);
+    }
   };
 
   return (
@@ -127,12 +125,19 @@ export default function OrderSection() {
 
           <div className="space-y-4">
             <h3 className="text-lg font-medium">Your Order</h3>
-            {orderItems.map((orderItem, index) => {
+            {fields.map((field, index) => {
                const selectedItemId = form.watch(`items.${index}.itemId`);
                const selectedItem = menuItems.find(item => item.id.toString() === selectedItemId);
+               const isPlate = selectedItem?.category === 'plate';
+               let numEntrees = 0;
+               if (isPlate) {
+                  if (selectedItem?.id === 100) numEntrees = 1;
+                  else if (selectedItem?.id === 101) numEntrees = 2;
+                  else if (selectedItem?.id === 102) numEntrees = 3;
+               }
               
               return (
-              <div key={orderItem.id} className="space-y-4 rounded-lg border p-4">
+              <div key={field.id} className="space-y-4 rounded-lg border p-4 relative">
                  <div className="flex items-end gap-4">
                   <FormField
                     control={form.control}
@@ -140,7 +145,12 @@ export default function OrderSection() {
                     render={({ field }) => (
                       <FormItem className="flex-1">
                         <FormLabel>Menu Item</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <Select onValueChange={(value) => {
+                          field.onChange(value);
+                          // Reset entrees and sides when item changes
+                          form.setValue(`items.${index}.entrees`, []);
+                          form.setValue(`items.${index}.sides`, []);
+                        }} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
                               <SelectValue placeholder="Select a dish" />
@@ -169,59 +179,122 @@ export default function OrderSection() {
                       </FormItem>
                     )}
                   />
-                  <Button variant="ghost" size="icon" onClick={() => removeItem(index)} disabled={orderItems.length <= 1} aria-label="Remove item">
+                  <Button variant="ghost" size="icon" onClick={() => removeItem(index)} disabled={fields.length <= 1} aria-label="Remove item">
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
                 </div>
 
-                {selectedItem?.category === 'plate' && (
-                  <FormField
-                    control={form.control}
-                    name={`items.${index}.sides`}
-                    render={({ field }) => (
-                      <FormItem className="space-y-3">
-                        <div>
-                          <FormLabel className="text-base">Side Options</FormLabel>
-                          <FormDescription>
-                            Select up to 2 sides for your plate.
-                          </FormDescription>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          {sideItems.map((side) => (
-                              <FormField
-                                key={side.id}
-                                control={form.control}
-                                name={`items.${index}.sides`}
-                                render={({ field: sideField }) => (
-                                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                {isPlate && (
+                  <div className="space-y-4">
+                    {/* Entree Selection */}
+                    <div className="space-y-2">
+                      <FormLabel>Entree Selections</FormLabel>
+                      <FormDescription>Choose your entree(s) for the plate.</FormDescription>
+                      {[...Array(numEntrees)].map((_, entreeIndex) => {
+                         const selectedEntreeId = form.watch(`items.${index}.entrees.${entreeIndex}.entreeId`);
+                         const showWingFlavor = selectedEntreeId === WINGS_ENTREE_ID;
+                        return (
+                          <div key={entreeIndex} className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
+                            <FormField
+                              control={form.control}
+                              name={`items.${index}.entrees.${entreeIndex}.entreeId`}
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel className="text-xs">Entree {entreeIndex + 1}</FormLabel>
+                                  <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                      <Checkbox
-                                        checked={sideField.value?.includes(side.id.toString())}
-                                        onCheckedChange={(checked) => {
-                                          const currentSides = sideField.value || [];
-                                          if (checked) {
-                                            if (currentSides.length < 2) {
-                                              sideField.onChange([...currentSides, side.id.toString()]);
-                                            }
-                                          } else {
-                                            sideField.onChange(currentSides.filter((value) => value !== side.id.toString()));
-                                          }
-                                        }}
-                                        disabled={!sideField.value?.includes(side.id.toString()) && sideField.value?.length >= 2}
-                                      />
+                                      <SelectTrigger>
+                                        <SelectValue placeholder="Select Entree" />
+                                      </SelectTrigger>
                                     </FormControl>
-                                    <FormLabel className="font-normal">
-                                      {side.name}
-                                    </FormLabel>
+                                    <SelectContent>
+                                      {plateEntreeOptions.map(opt => (
+                                        <SelectItem key={opt.id} value={opt.id.toString()}>{opt.name}</SelectItem>
+                                      ))}
+                                    </SelectContent>
+                                  </Select>
+                                   <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                            {showWingFlavor && (
+                               <FormField
+                                control={form.control}
+                                name={`items.${index}.entrees.${entreeIndex}.wingFlavor`}
+                                render={({ field }) => (
+                                  <FormItem>
+                                    <FormLabel className="text-xs">Wing Flavor</FormLabel>
+                                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                      <FormControl>
+                                        <SelectTrigger>
+                                          <SelectValue placeholder="Select Flavor" />
+                                        </SelectTrigger>
+                                      </FormControl>
+                                      <SelectContent>
+                                        {wingFlavors.map(flavor => (
+                                          <SelectItem key={flavor} value={flavor}>{flavor}</SelectItem>
+                                        ))}
+                                      </SelectContent>
+                                    </Select>
+                                     <FormMessage />
                                   </FormItem>
                                 )}
                               />
-                          ))}
-                        </div>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    
+                    {/* Side Selection */}
+                    <FormField
+                      control={form.control}
+                      name={`items.${index}.sides`}
+                      render={() => (
+                        <FormItem className="space-y-3">
+                          <div>
+                            <FormLabel className="text-base">Side Options</FormLabel>
+                            <FormDescription>
+                              Select up to 2 sides for your plate.
+                            </FormDescription>
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            {sideItems.map((side) => (
+                                <FormField
+                                  key={side.id}
+                                  control={form.control}
+                                  name={`items.${index}.sides`}
+                                  render={({ field }) => (
+                                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                                      <FormControl>
+                                        <Checkbox
+                                          checked={field.value?.includes(side.id.toString())}
+                                          onCheckedChange={(checked) => {
+                                            const currentSides = field.value || [];
+                                            if (checked) {
+                                              if (currentSides.length < 2) {
+                                                field.onChange([...currentSides, side.id.toString()]);
+                                              }
+                                            } else {
+                                              field.onChange(currentSides.filter((value) => value !== side.id.toString()));
+                                            }
+                                          }}
+                                          disabled={!field.value?.includes(side.id.toString()) && field.value?.length >= 2}
+                                        />
+                                      </FormControl>
+                                      <FormLabel className="font-normal">
+                                        {side.name}
+                                      </FormLabel>
+                                    </FormItem>
+                                  )}
+                                />
+                            ))}
+                          </div>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                 )}
               </div>
             )})}

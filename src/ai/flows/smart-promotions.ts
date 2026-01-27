@@ -41,7 +41,7 @@ User ID: {{{userId}}}
 User Interests: {{#if interests}}{{{interests}}}{{else}}Unknown{{/if}}
 Past Orders: {{#if pastOrders}}{{{pastOrders}}}{{else}}None{{/if}}
 
-Current Promotions: Buy one get one 50% off all BBQ sandwiches on Tuesdays, Free delivery for orders over $50, 10% off catering orders for new customers
+Current Promotions: Wing Wednesday: Get a dozen wings for just $15!, Free delivery for orders over $50, 10% off catering orders for new customers
 
 Craft a concise and engaging message to inform the user about the most relevant promotion.
 `,

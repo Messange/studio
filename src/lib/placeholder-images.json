@@ -86,15 +86,27 @@
     },
     {
       "id": "fries",
-      "description": "A basket of french fries.",
-      "imageUrl": "https://images.unsplash.com/photo-1606755456206-b25206cde27e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmcmVuY2glMjBmcmllc3xlbnwwfHx8fDE3Njk0NzE2NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "french fries"
+      "description": "A basket of seasoned french fries.",
+      "imageUrl": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJsaWMlMjBmcmllc3xlbnwwfHx8fDE3Njk1MDY0MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "garlic fries"
     },
     {
       "id": "pulled-pork-plate",
       "description": "A plate of pulled pork with sides.",
       "imageUrl": "https://images.unsplash.com/photo-1739193670501-335f43a83229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3JrJTIwcGxhdGV8ZW58MHx8fHwxNzY5NDkzMzMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pork plate"
+    },
+    {
+      "id": "wings",
+      "description": "A plate of saucy BBQ chicken wings.",
+      "imageUrl": "https://images.unsplash.com/photo-1598514983318-2f64f1695140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYnElMjB3aW5nc3xlbnwwfHx8fDE3Njk1MDY2MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "bbq wings"
+    },
+    {
+      "id": "hot-links",
+      "description": "Grilled hot link sausages on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1625041772863-f2343a9f0aa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiaHElMjBob3QlMjBsaW5rc3xlbnwwfHx8fDE3Njk1MDY2MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "hot links"
     }
   ]
 }

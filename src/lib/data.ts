@@ -1,38 +1,30 @@
 export const menuItems = [
-  // Plates - Served with two sides and cornbread
+  // Plates
   {
-    id: 1,
-    name: "Pulled Pork Plate",
-    description: "A generous portion of our slow-smoked pulled pork. Served with two sides and cornbread.",
-    price: "$15.99",
+    id: 100,
+    name: "One Entree Plate",
+    description: "Your choice of one entree (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
+    price: "$17.99",
     category: "plate",
     imageId: "pulled-pork-plate",
   },
   {
-    id: 2,
-    name: "BBQ Ribs Plate",
-    description: "Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce. Served with two sides and cornbread.",
-    price: "Half rack: $14.99, Full rack: $24.99",
+    id: 101,
+    name: "Two Entree Plate",
+    description: "Your choice of two entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
+    price: "$23.99",
     category: "plate",
     imageId: "bbq-ribs",
   },
   {
-    id: 3,
-    name: "Smoked Brisket Plate",
-    description: "Sliced smoked brisket, served with two sides and cornbread.",
-    price: "$16.99",
+    id: 102,
+    name: "Three Entree Plate",
+    description: "Your choice of three entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
+    price: "$28.99",
     category: "plate",
     imageId: "brisket-platter",
   },
-  {
-    id: 4,
-    name: "Fried Chicken Plate",
-    description: "Crispy fried chicken, seasoned with our special blend of spices. Served with two sides and cornbread.",
-    price: "2 pieces: $14.99, 4 pieces: $19.99",
-    category: "plate",
-    imageId: "fried-chicken",
-  },
-
+  
   // Entrees - A La Carte
   {
     id: 5,
@@ -73,6 +65,22 @@ export const menuItems = [
     price: "2 pieces: $9.99, 4 pieces: $14.99",
     category: "entree",
     imageId: "fried-chicken",
+  },
+  {
+    id: 20,
+    name: "Wings (6pc)",
+    description: "6 crispy and juicy wings tossed in your choice of sauce. Flavors: Smoky BBQ, Spicy Buffalo, Garlic Parmesan.",
+    price: "$10.99",
+    category: "entree",
+    imageId: "wings",
+  },
+  {
+    id: 21,
+    name: "Hot Links",
+    description: "Spicy sausage links, smoked to perfection and served hot.",
+    price: "$8.99",
+    category: "entree",
+    imageId: "hot-links",
   },
 
   // Sides
@@ -161,8 +169,8 @@ export const menuItems = [
 export const specialOffers = [
     {
         id: 1,
-        title: "Family Meal Deal",
-        description: "Feed the family! Get 2 lbs of your choice of meat, 2 large sides, and 4 pieces of cornbread for just $49.99.",
+        title: "Wing Wednesday",
+        description: "Get a dozen wings for just $15 every Wednesday!",
     },
     {
         id: 2,
@@ -175,6 +183,8 @@ export const specialOffers = [
         description: "10% off catering orders for new customers.",
     }
 ];
+
+export const wingFlavors = ["Smoky BBQ", "Spicy Buffalo", "Garlic Parmesan"];
 
 export const jobListings = [
     {
