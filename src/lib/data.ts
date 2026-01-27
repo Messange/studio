@@ -1,42 +1,83 @@
 export const menuItems = [
+  // Plates - Served with two sides and cornbread
   {
     id: 1,
-    name: "Pulled Pork Sandwich",
-    description: "Slow-smoked pulled pork, served on a toasted bun with your choice of sauce.",
-    price: "$9.99",
-    category: "main",
-    imageId: "pulled-pork",
-    isPlate: false,
+    name: "Pulled Pork Plate",
+    description: "A generous portion of our slow-smoked pulled pork. Served with two sides and cornbread.",
+    price: "$15.99",
+    category: "plate",
+    imageId: "pulled-pork-plate",
   },
   {
     id: 2,
-    name: "BBQ Ribs",
+    name: "BBQ Ribs Plate",
     description: "Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce. Served with two sides and cornbread.",
     price: "Half rack: $14.99, Full rack: $24.99",
-    category: "main",
+    category: "plate",
     imageId: "bbq-ribs",
-    isPlate: true,
   },
   {
     id: 3,
-    name: "Smoked Brisket Platter",
+    name: "Smoked Brisket Plate",
     description: "Sliced smoked brisket, served with two sides and cornbread.",
     price: "$16.99",
-    category: "main",
+    category: "plate",
     imageId: "brisket-platter",
-    isPlate: true,
   },
   {
     id: 4,
-    name: "Fried Chicken Platter",
+    name: "Fried Chicken Plate",
     description: "Crispy fried chicken, seasoned with our special blend of spices. Served with two sides and cornbread.",
     price: "2 pieces: $14.99, 4 pieces: $19.99",
-    category: "main",
+    category: "plate",
     imageId: "fried-chicken",
-    isPlate: true,
   },
+
+  // Entrees - A La Carte
   {
     id: 5,
+    name: "Pulled Pork Sandwich",
+    description: "Slow-smoked pulled pork, served on a toasted bun with your choice of sauce.",
+    price: "$9.99",
+    category: "entree",
+    imageId: "pulled-pork",
+  },
+  {
+    id: 6,
+    name: "Pulled Pork (A La Carte)",
+    description: "A half-pound of our slow-smoked pulled pork.",
+    price: "$10.99",
+    category: "entree",
+    imageId: "pulled-pork-plate",
+  },
+  {
+    id: 7,
+    name: "BBQ Ribs (A La Carte)",
+    description: "Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce.",
+    price: "Half rack: $11.99, Full rack: $21.99",
+    category: "entree",
+    imageId: "bbq-ribs",
+  },
+  {
+    id: 8,
+    name: "Smoked Brisket (A La Carte)",
+    description: "A half-pound of sliced smoked brisket, tender and juicy.",
+    price: "$12.99",
+    category: "entree",
+    imageId: "brisket-platter",
+  },
+  {
+    id: 9,
+    name: "Fried Chicken (A La Carte)",
+    description: "Crispy fried chicken, seasoned with our special blend of spices.",
+    price: "2 pieces: $9.99, 4 pieces: $14.99",
+    category: "entree",
+    imageId: "fried-chicken",
+  },
+
+  // Sides
+  {
+    id: 10,
     name: "Green Chili Mac and Cheese",
     description: "Creamy mac and cheese with a kick of green chili, made with a blend of cheddar and parmesan cheeses.",
     price: "$5.99",
@@ -44,7 +85,7 @@ export const menuItems = [
     imageId: "green-chili-mac-cheese",
   },
   {
-    id: 6,
+    id: 11,
     name: "Coleslaw",
     description: "Fresh coleslaw, made with shredded cabbage, carrots, and our tangy coleslaw dressing.",
     price: "$3.99",
@@ -52,7 +93,7 @@ export const menuItems = [
     imageId: "coleslaw",
   },
   {
-    id: 7,
+    id: 12,
     name: "Cornbread",
     description: "Sweet and moist cornbread, baked fresh daily.",
     price: "$2.99",
@@ -60,7 +101,7 @@ export const menuItems = [
     imageId: "cornbread",
   },
   {
-    id: 8,
+    id: 13,
     name: "Sweet Potato Fries",
     description: "Crispy sweet potato fries, seasoned with cinnamon and sugar.",
     price: "$5.99",
@@ -68,7 +109,7 @@ export const menuItems = [
     imageId: "sweet-potato-fries",
   },
   {
-    id: 9,
+    id: 14,
     name: "Baked Beans",
     description: "Hearty baked beans with a sweet and smoky flavor.",
     price: "$3.99",
@@ -76,7 +117,7 @@ export const menuItems = [
     imageId: "baked-beans",
   },
   {
-    id: 10,
+    id: 15,
     name: "Grilled Teriyaki Parmesan Corn",
     description: "Grilled corn on the cob with a teriyaki glaze and parmesan cheese.",
     price: "$4.99",
@@ -84,7 +125,7 @@ export const menuItems = [
     imageId: "teriyaki-corn",
   },
   {
-    id: 11,
+    id: 16,
     name: "Great Grannys Green Beans",
     description: "Classic green beans just like granny used to make.",
     price: "$3.99",
@@ -92,7 +133,7 @@ export const menuItems = [
     imageId: "green-beans",
   },
   {
-    id: 12,
+    id: 17,
     name: "Fried Okra",
     description: "Crispy fried okra, a southern favorite.",
     price: "$4.99",
@@ -100,7 +141,7 @@ export const menuItems = [
     imageId: "fried-okra",
   },
   {
-    id: 13,
+    id: 18,
     name: "Potato Salad",
     description: "Creamy and tangy potato salad, perfect for any BBQ.",
     price: "$3.99",
@@ -108,29 +149,20 @@ export const menuItems = [
     imageId: "potato-salad",
   },
   {
-    id: 14,
+    id: 19,
     name: "Fries",
     description: "Classic crispy french fries.",
     price: "$3.99",
     category: "side",
     imageId: "fries",
   },
-  {
-    id: 15,
-    name: "Pulled Pork Plate",
-    description: "A generous portion of our slow-smoked pulled pork, served with two sides and cornbread.",
-    price: "$15.99",
-    category: "main",
-    imageId: "pulled-pork-plate",
-    isPlate: true,
-  },
 ];
 
 export const specialOffers = [
     {
         id: 1,
-        title: "Taco Tuesday",
-        description: "Buy one get one 50% off all BBQ sandwiches on Tuesdays.",
+        title: "Family Meal Deal",
+        description: "Feed the family! Get 2 lbs of your choice of meat, 2 large sides, and 4 pieces of cornbread for just $49.99.",
     },
     {
         id: 2,

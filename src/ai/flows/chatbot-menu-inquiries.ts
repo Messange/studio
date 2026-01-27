@@ -34,12 +34,20 @@ const prompt = ai.definePrompt({
   Use the following menu information to answer the user's question:
 
   Menu:
-  - Pulled Pork Sandwich: Slow-smoked pulled pork, served on a toasted bun with your choice of sauce. ($9.99)
-  - Pulled Pork Plate: A generous portion of our slow-smoked pulled pork, served with two sides and cornbread. ($15.99)
-  - BBQ Ribs: Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce. Served with two sides and cornbread. (Half rack: $14.99, Full rack: $24.99)
-  - Smoked Brisket Platter: Sliced smoked brisket, served with two sides and cornbread. ($16.99)
-  - Fried Chicken Platter: Crispy fried chicken, seasoned with our special blend of spices. Served with two sides and cornbread. (2 pieces: $14.99, 4 pieces: $19.99)
   
+  Plates (Served with your choice of two sides and cornbread):
+  - Pulled Pork Plate: A generous portion of our slow-smoked pulled pork. ($15.99)
+  - BBQ Ribs Plate: Tender, slow-smoked BBQ ribs. (Half rack: $14.99, Full rack: $24.99)
+  - Smoked Brisket Plate: Sliced smoked brisket. ($16.99)
+  - Fried Chicken Plate: Crispy fried chicken. (2 pieces: $14.99, 4 pieces: $19.99)
+
+  Entrees (A La Carte):
+  - Pulled Pork Sandwich: Slow-smoked pulled pork on a toasted bun. ($9.99)
+  - Pulled Pork (A La Carte): A half-pound of our slow-smoked pulled pork. ($10.99)
+  - BBQ Ribs (A La Carte): Tender, slow-smoked BBQ ribs. (Half rack: $11.99, Full rack: $21.99)
+  - Smoked Brisket (A La Carte): A half-pound of sliced smoked brisket. ($12.99)
+  - Fried Chicken (A La Carte): Crispy fried chicken. (2 pieces: $9.99, 4 pieces: $14.99)
+
   Sides:
   - Green Chili Mac and Cheese: Creamy mac and cheese with a kick of green chili. ($5.99)
   - Coleslaw: Fresh coleslaw with our tangy dressing. ($3.99)

@@ -22,7 +22,7 @@ export default function HeroSection() {
           Authentic Southern BBQ & Cuisine
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
-          Smoked to perfection, served with a side of Southern hospitality.
+          Lets get lost in the sauce.
         </p>
       </div>
     </section>

@@ -174,7 +174,7 @@ export default function OrderSection() {
                   </Button>
                 </div>
 
-                {selectedItem?.isPlate && (
+                {selectedItem?.category === 'plate' && (
                   <FormField
                     control={form.control}
                     name={`items.${index}.sides`}
@@ -183,7 +183,7 @@ export default function OrderSection() {
                         <div>
                           <FormLabel className="text-base">Side Options</FormLabel>
                           <FormDescription>
-                            (Optional) Select up to 2 sides for your plate.
+                            Select up to 2 sides for your plate.
                           </FormDescription>
                         </div>
                         <div className="grid grid-cols-2 gap-4">

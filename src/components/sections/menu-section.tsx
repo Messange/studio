@@ -36,9 +36,10 @@ export default function MenuSection() {
       <Separator />
 
       <div>
-        <h3 className="text-2xl font-bold font-headline mb-6">Main Plates</h3>
+        <h3 className="text-2xl font-bold font-headline mb-6">Plates</h3>
+        <p className="text-center text-muted-foreground -mt-4 mb-6">Served with your choice of two sides and cornbread.</p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {menuItems.filter(item => item.category === 'main').map((item) => {
+          {menuItems.filter(item => item.category === 'plate').map((item) => {
             const image = getPlaceholderImage(item.imageId);
             return (
               <Card key={item.id} className="overflow-hidden flex flex-col">
@@ -60,6 +61,35 @@ export default function MenuSection() {
         </div>
       </div>
       
+      <Separator />
+
+      <div>
+        <h3 className="text-2xl font-bold font-headline mb-6">Entrees (A La Carte)</h3>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {menuItems.filter(item => item.category === 'entree').map((item) => {
+            const image = getPlaceholderImage(item.imageId);
+            return (
+              <Card key={item.id} className="overflow-hidden flex flex-col">
+                {image && (
+                   <div className="relative h-48 w-full">
+                    <Image src={image.imageUrl} alt={item.name} fill className="object-cover" data-ai-hint={image.imageHint}/>
+                   </div>
+                )}
+                <CardHeader>
+                  <CardTitle className="font-headline">{item.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow flex flex-col">
+                  <CardDescription className="flex-grow">{item.description}</CardDescription>
+                  <p className="text-lg font-semibold mt-4">{item.price}</p>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </div>
+      </div>
+      
+      <Separator />
+
       <div>
         <h3 className="text-2xl font-bold font-headline mb-6">Sides</h3>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
