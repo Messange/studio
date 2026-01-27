@@ -1,4 +1,5 @@
 import { Logo } from "@/components/icons";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,9 +9,16 @@ export default function Footer() {
           <Logo className="h-6 w-6 text-primary" />
           <p className="text-sm text-muted-foreground">&copy; {new Date().getFullYear()} Saucy's Southern BBQ & Cuisine. All Rights Reserved.</p>
         </div>
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-          <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+        <div className="flex items-center gap-4">
+            <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+            </a>
+            <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" />
+            </a>
         </div>
       </div>
     </footer>
