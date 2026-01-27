@@ -1,28 +1,29 @@
+
 export const menuItems = [
   // Plates
   {
     id: 100,
     name: "One Entree Plate",
-    description: "Your choice of one entree (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
+    description: "One of our signature smoked entrees (Wings, Ribs, or Hot Links) piled high, served with your choice of two scratch-made sides and a piece of sweet cornbread.",
     price: "$17.99",
-    category: "plate",
-    imageId: "pulled-pork-plate",
-  },
-  {
-    id: 101,
-    name: "Two Entree Plate",
-    description: "Your choice of two entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
-    price: "$23.99",
     category: "plate",
     imageId: "bbq-ribs",
   },
   {
+    id: 101,
+    name: "Two Entree Plate",
+    description: "Can't decide? Pick two of your favorite entrees (Wings, Ribs, or Hot Links)! Comes with two of our delicious sides and a piece of sweet cornbread.",
+    price: "$23.99",
+    category: "plate",
+    imageId: "wings",
+  },
+  {
     id: 102,
     name: "Three Entree Plate",
-    description: "Your choice of three entrees (Wings, Ribs, or Hot Links), served with two sides and cornbread.",
+    description: "The ultimate pitmaster's feast! Choose any three of our signature entrees (Wings, Ribs, or Hot Links), served with two sides and a piece of sweet cornbread.",
     price: "$28.99",
     category: "plate",
-    imageId: "brisket-platter",
+    imageId: "hot-links",
   },
   
   // Entrees - A La Carte
@@ -174,8 +175,8 @@ export const specialOffers = [
     },
     {
         id: 2,
-        title: "Free Delivery",
-        description: "Free delivery for orders over $50.",
+        title: "Family Meal Deal",
+        description: "Feed the whole family! Get a full rack of ribs, a whole chicken, 2 large sides, and cornbread for $59.99.",
     },
     {
         id: 3,
