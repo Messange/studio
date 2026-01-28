@@ -7,12 +7,6 @@
       "imageHint": "bbq ribs platter"
     },
     {
-      "id": "pulled-pork",
-      "description": "A mouth-watering pulled pork sandwich overflowing with meat.",
-      "imageUrl": "https://images.unsplash.com/photo-1621523133136-cea844f32bdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwdWxsZWQlMjBwb3JrJTIwc2FuZHdpY2h8ZW58MHx8fHwxNzY5NDkxNjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pulled pork sandwich"
-    },
-    {
       "id": "bbq-ribs",
       "description": "A rack of saucy BBQ ribs being grilled.",
       "imageUrl": "https://images.unsplash.com/photo-1611354574034-9655b5b72d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYnElMjByaWJzfGVufDB8fHx8MTc2OTQ5MTYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -23,12 +17,6 @@
       "description": "Slices of tender smoked brisket on a platter.",
       "imageUrl": "https://images.unsplash.com/photo-1705509444124-d908cae21ef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzbW9rZWQlMjBicmlza2V0fGVufDB8fHx8MTc2OTQ5MTYzMXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "smoked brisket"
-    },
-    {
-      "id": "fried-chicken",
-      "description": "Golden crispy fried chicken on a plate.",
-      "imageUrl": "https://images.unsplash.com/photo-1600555379765-f82335a7b1b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnJpZWQlMjBjaGlja2VufGVufDB8fHx8MTc2OTQ2OTE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fried chicken"
     },
     {
       "id": "green-chili-mac-cheese",
@@ -83,12 +71,6 @@
       "description": "A basket of seasoned french fries.",
       "imageUrl": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJsaWMlMjBmcmllc3xlbnwwfHx8fDE3Njk1MDY0MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "garlic fries"
-    },
-    {
-      "id": "pulled-pork-plate",
-      "description": "A plate of pulled pork with sides.",
-      "imageUrl": "https://images.unsplash.com/photo-1739193670501-335f43a83229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwb3JrJTIwcGxhdGV8ZW58MHx8fHwxNzY5NDkzMzMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pork plate"
     },
     {
       "id": "wings",

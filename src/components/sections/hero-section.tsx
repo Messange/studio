@@ -21,7 +21,7 @@ export default function HeroSection() {
         <h1 className="text-5xl md:text-7xl font-bold font-headline drop-shadow-lg">
           Authentic Southern BBQ & Cuisine
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+        <p className="mt-4 text-3xl md:text-xl max-w-4xl mx-auto drop-shadow-md">
           Lets get lost in the sauce.
         </p>
       </div>

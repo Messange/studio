@@ -28,22 +28,6 @@ export const menuItems = [
   
   // Entrees - A La Carte
   {
-    id: 5,
-    name: "Pulled Pork Sandwich",
-    description: "Slow-smoked pulled pork, served on a toasted bun with your choice of sauce.",
-    price: "$9.99",
-    category: "entree",
-    imageId: "pulled-pork",
-  },
-  {
-    id: 6,
-    name: "Pulled Pork (A La Carte)",
-    description: "A half-pound of our slow-smoked pulled pork.",
-    price: "$10.99",
-    category: "entree",
-    imageId: "pulled-pork-plate",
-  },
-  {
     id: 7,
     name: "BBQ Ribs (A La Carte)",
     description: "Tender, slow-smoked BBQ ribs, slathered in our signature BBQ sauce.",
@@ -58,14 +42,6 @@ export const menuItems = [
     price: "$12.99",
     category: "entree",
     imageId: "brisket-platter",
-  },
-  {
-    id: 9,
-    name: "Fried Chicken (A La Carte)",
-    description: "Crispy fried chicken, seasoned with our special blend of spices.",
-    price: "2 pieces: $9.99, 4 pieces: $14.99",
-    category: "entree",
-    imageId: "fried-chicken",
   },
   {
     id: 20,
@@ -183,7 +159,7 @@ export const jobListings = [
     {
         id: 1,
         title: "Line Cook",
-        location: "Austin, TX",
+        location: "Denver, CO",
         description: "We are seeking an experienced and passionate Line Cook to join our kitchen team. You will be responsible for preparing high-quality food in a timely, efficient, and sanitary manner.",
         responsibilities: [
             "Prepare and cook food according to recipes and quality standards.",
@@ -201,7 +177,7 @@ export const jobListings = [
     {
         id: 2,
         title: "Server / Waitstaff",
-        location: "Austin, TX",
+        location: "Denver, CO",
         description: "Join our front-of-house team as a Server! You will be the face of our restaurant, providing excellent customer service and ensuring our guests have a memorable dining experience.",
         responsibilities: [
             "Greet and seat customers.",
