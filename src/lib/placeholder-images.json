@@ -3,85 +3,85 @@
     {
       "id": "hero-image",
       "description": "A close-up shot of delicious, smoky BBQ ribs on a wooden platter.",
-      "imageUrl": "https://images.unsplash.com/photo-1568454789753-a689c143d1c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiYnElMjByaWJzJTIwcGxhdHRlcnxlbnwwfHx8fDE3Njk0OTE2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/hero-image.jpg",
       "imageHint": "bbq ribs platter"
     },
     {
       "id": "bbq-ribs",
       "description": "A rack of saucy BBQ ribs being grilled.",
-      "imageUrl": "https://images.unsplash.com/photo-1611354574034-9655b5b72d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYnElMjByaWJzfGVufDB8fHx8MTc2OTQ5MTYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/bbq-ribs.jpg",
       "imageHint": "bbq ribs"
     },
     {
       "id": "brisket-platter",
       "description": "Slices of tender smoked brisket on a platter.",
-      "imageUrl": "https://images.unsplash.com/photo-1705509444124-d908cae21ef8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzbW9rZWQlMjBicmlza2V0fGVufDB8fHx8MTc2OTQ5MTYzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/brisket-platter.jpg",
       "imageHint": "smoked brisket"
     },
     {
       "id": "green-chili-mac-cheese",
       "description": "A creamy bowl of baked macaroni and cheese with green chilis.",
-      "imageUrl": "https://images.unsplash.com/photo-1657047869586-258ee389a00d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYWNhcm9uaSUyMGNoZWVzZXxlbnwwfHx8fDE3Njk0OTE2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/green-chili-mac-cheese.jpg",
       "imageHint": "macaroni cheese"
     },
     {
       "id": "coleslaw",
       "description": "A fresh bowl of coleslaw.",
-      "imageUrl": "https://images.unsplash.com/photo-1727337440811-7ae0b89136b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2xlc2xhdyUyMGJvd2x8ZW58MHx8fHwxNzY5NDkxNjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/coleslaw.jpg",
       "imageHint": "coleslaw bowl"
     },
     {
       "id": "cornbread",
       "description": "A slice of golden-brown cornbread.",
-      "imageUrl": "https://images.unsplash.com/photo-1691442563474-df78f0cf8f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3JuYnJlYWQlMjBzbGljZXxlbnwwfHx8fDE3Njk0OTE2MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/cornbread.jpg",
       "imageHint": "cornbread slice"
     },
     {
       "id": "sweet-potato-fries",
       "description": "A basket of crispy sweet potato fries.",
-      "imageUrl": "https://images.unsplash.com/photo-1603481712606-08b5a2789816?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzd2VldCUyMHBvdGF0byUyMGZyaWVzfGVufDB8fHx8MTc2OTQ5MTYzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/sweet-potato-fries.jpg",
       "imageHint": "sweet potato fries"
     },
     {
       "id": "baked-beans",
       "description": "A bowl of baked beans.",
-      "imageUrl": "https://images.unsplash.com/photo-1602873520153-ec56ca3c205b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWtlZCUyMGJlYW5zfGVufDB8fHx8MTc2OTQ5MzMzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/baked-beans.jpg",
       "imageHint": "baked beans"
     },
     {
       "id": "green-beans",
       "description": "A serving of green beans.",
-      "imageUrl": "https://images.unsplash.com/photo-1508900173264-bb171fa617e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncmVlbiUyMGJlYW5zfGVufDB8fHx8MTc2OTQ3NDk5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/green-beans.jpg",
       "imageHint": "green beans"
     },
     {
       "id": "fried-okra",
       "description": "A basket of fried okra.",
-      "imageUrl": "https://images.unsplash.com/photo-1614778168922-ab1cdf04800e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnJpZWQlMjBva3JhfGVufDB8fHx8MTc2OTQyNTUyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/fried-okra.jpg",
       "imageHint": "fried okra"
     },
     {
       "id": "potato-salad",
       "description": "A bowl of potato salad.",
-      "imageUrl": "https://images.unsplash.com/photo-1680249816404-29fedb436294?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3RhdG8lMjBzYWxhZHxlbnwwfHx8fDE3Njk0OTMzMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/potato-salad.jpg",
       "imageHint": "potato salad"
     },
     {
       "id": "fries",
       "description": "A basket of seasoned french fries.",
-      "imageUrl": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJsaWMlMjBmcmllc3xlbnwwfHx8fDE3Njk1MDY0MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "/fries.jpg",
       "imageHint": "garlic fries"
     },
     {
       "id": "wings",
       "description": "A plate of saucy BBQ chicken wings.",
-      "imageUrl": "https://images.unsplash.com/photo-1598514983318-2f64f1695140?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYnElMjB3aW5nc3xlbnwwfHx8fDE3Njk1MDY2MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "/wings.jpg",
       "imageHint": "bbq wings"
     },
     {
       "id": "hot-links",
       "description": "Grilled hot link sausages on a plate.",
-      "imageUrl": "https://images.unsplash.com/photo-1625041772863-f2343a9f0aa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiaHElMjBob3QlMjBsaW5rc3xlbnwwfHx8fDE3Njk1MDY2MDF8MA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "/hot-links.jpg",
       "imageHint": "hot links"
     }
   ]
