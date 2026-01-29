@@ -43,11 +43,9 @@ const prompt = ai.definePrompt({
   Entrees (A La Carte):
   - Wings (6pc): 6 pieces of our famous wings. Flavors: Smoky BBQ, Spicy Buffalo, Garlic Parmesan. ($10.99)
   - Hot Links: Spicy sausage links, smoked to perfection. ($8.99)
-  - Pulled Pork Sandwich: Slow-smoked pulled pork on a toasted bun. ($9.99)
-  - Pulled Pork (A La Carte): A half-pound of our slow-smoked pulled pork. ($10.99)
   - BBQ Ribs (A La Carte): Tender, slow-smoked BBQ ribs. (Half rack: $11.99, Full rack: $21.99)
   - Smoked Brisket (A La Carte): A half-pound of sliced smoked brisket. ($12.99)
-  - Fried Chicken (A La Carte): Crispy fried chicken. (2 pieces: $9.99, 4 pieces: $14.99)
+  
 
   Sides:
   - Green Chili Mac and Cheese: Creamy mac and cheese with a kick of green chili. ($5.99)
